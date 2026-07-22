@@ -8,3 +8,9 @@ gpt_4_1_mini = ChatOpenAI(
     model="gpt-4.1-mini",
     temperature=1,
 )
+
+gpt_5_nano = ChatOpenAI(
+    openai_api_key=settings.OPENAI_API_KEY,
+    model="gpt-5-nano",
+    temperature=0,
+)
