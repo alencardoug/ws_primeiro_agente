@@ -10,10 +10,9 @@ from chat.llm_models import gpt_4_1_mini
 # caso este módulo seja importado por testes ou por outra parte da aplicação.
 def main() -> None:
     # HumanMessage representa uma mensagem enviada pelo usuário ao agente.
-    question = HumanMessage(content="Olá! Dê um oi curtinho mas criativo.")
+    question = HumanMessage(content="Crie um ditado, um provérbio, que deve ter sentido. Pode se basear em provérbios já existentes, mas não pode ser uma cópia literal. Seja criativo. Não precisa explicar o provérbio, apenas crie-o.")
 
-    # O modelo já foi configurado em `chat.llm_models`, inclusive com a chave
-    # carregada pelo Settings. Assim, este arquivo não precisa de `load_dotenv()`.
+    # O modelo foi configurado em `chat.llm_models`.
     agent = create_agent(
         model=gpt_4_1_mini,
         # O system prompt define o comportamento geral do agente e tem prioridade
